@@ -5,12 +5,17 @@ import PropTypes from 'prop-types';
 export default function FriendList({ friends }) {
   return (
     <ul className={s.friendList}>
-      {friends.map(({ id, name, avatar, isOnline }) => (
-        <FriendItem key={id} name={name} avatar={avatar} isOnline={isOnline} />
+      {friends.map(({ order, name, avatar, isOnline }) => (
+        <FriendItem
+          key={order}
+          name={name}
+          avatar={avatar}
+          isOnline={isOnline}
+        />
       ))}
     </ul>
   );
 }
 FriendList.propTypes = {
-  id: PropTypes.number.isRequired,
+  order: PropTypes.number.isRequired,
 };
