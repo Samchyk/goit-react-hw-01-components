@@ -17,5 +17,5 @@ export default function FriendList({ friends }) {
   );
 }
 FriendList.propTypes = {
-  order: PropTypes.number.isRequired,
+  friends: PropTypes.number.isRequired,
 };
